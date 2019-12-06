@@ -56,14 +56,11 @@
 			<div class="top-menu">
 				<div class="container">
 					<div class="row">
-						<!-- <div class="col-md-2">
-							<div id="colorlib-logo"><a href="index.html">Unapp</a></div>
-						</div> -->
 						<div class="col-md-12 text-right menu-1">
 							<ul>
 								<li><a href="index.html">Home</a></li>
 								<li class="active"><a href="data.html">Data</a></li>
-								<li><a href="blog.html">Explore</a></li>
+								<li><a href="explore.html">Explore</a></li>
 								<li><a href="about.html">Analysis</a></li>
 								<li><a href="shop.html">Team</a></li>
 							</ul>
@@ -81,7 +78,7 @@
 						<div class="col-md-12 col-md-offset-0">
 							<div class="animate-box">
 								<h2>Data Quality</h2>
-								<p class="breadcrumbs"><span><a href="index.html">Home</a></span> <span>Services</span></p>
+								<p class="breadcrumbs"><span><a href="index.html">Home</a></span> <span>Data</span></p>
 							</div>
 						</div>
 					</div>
@@ -92,13 +89,28 @@
 		<div class="colorlib-intro">
 				<div class="container">
 					<div class="row">
-						<div class="col-md-8 col-md-offset-2 text-center colorlib-heading animate-box">
-							<p>We obtain the raw data from bla bla bla</p>
+						<div class="col-md-10 col-md-offset-1 text-center colorlib-heading animate-box">
+							<p>We obtain the raw data from <a href="https://www.kaggle.com/yelp-dataset/yelp-dataset/version/6# ">Kaggle</a>
+							   and focus on the following two datasets.</p>
+							<p> <strong> Yelp_business.csv &nbsp &nbsp</strong> presents the attributes of a business, such as business_id, address, neighborhood, business category, number of reviews, et al. </p>
+							<p> <strong> Yelp_review.csv &nbsp &nbsp</strong> presents review of a particular user to a busines and three additional varibles ("usefull", "funny", and "cool" ) that sum up other poeple's votes on the review.  </p>
+							<p>Since we limit the geographical scope to only concerning Pittsburgh city, we first select out all the entries whose city attribute is Pittsburgh
+							   from the business table, and join it together with the review table on the attribute <i>"business_id"</i>
+							</p>
+							<a href="./pittsburgh_review.csv">Click here to download the full dataset in csv</a></i>
 						</div>
 					</div>
-					<div class="row">
-						<div class="col-md-12 animate-box">
-						</div>
+				</div>
+		</div>
+
+		<div class="colorlib-featured">
+				<div class="row animate-box">
+					<div class="featured-wrap">
+								<div class="col-md-8 col-md-offset-2">
+										<iframe id="table_head" scrolling="yes" style="border:none;" src = "pitt_review_data.html" height="560" width="100%">
+											</iframe>
+										<br><br><br><br>
+								</div>
 					</div>
 				</div>
 		</div>
@@ -110,25 +122,49 @@
 									<article>
 											<h2>Completeness</h2>
 											<p><span><i>Approprioate Data</i></span></p>
-											<p class>The raw dataset is obtained from Kaggle, and we believe it is the largest and most comprehensive one that Yelp has made public to people for research purposes. 
+											<p>The raw dataset is obtained from Kaggle, and we believe it is the largest and most comprehensive one that Yelp has made public to people for research purposes. 
 												Even after reducing the scope to only considering the businesses located in the Pittsburgh city, we are able to gather a table with over 170,000 entries and 20 attributes. </p>
 											<p><span><i>Missing Data</i></span></p>
+											<p>we notice that only <i>"neighborhood"</i> and <i>"postal_code"</i> contain missing entries. Further analysis shows that there are 2194 unique businesses in total that doesn't have a neighborhood attribute, 
+												and 18 unique businesses in total with no postal_code attribute. 
+												Since we focus on providing explanatory analysis for this part of the project, 
+												we choose not to remove the entire row now if its neigherbood and/or postal_code attributes are missing. 
+												The missing data will be dealt with later when we analyze more specific analysis that make uses of those two attributes.</p>
 									</article>
 								</div>
 								<div class="col-md-8 col-md-offset-2">
 									<article>
 											<h2>Coherence</h2>
+
 											<p><span><i>Are lat and long coherent?</i></span></p>
 											<iframe id="lat_long" scrolling="no" style="border:none;" seamless="seamless" src = "graphs/lat_long.html" height="525" width="100%">
 											</iframe>
+											<p style="text-indent: 2em;">By looking at the box plots above, We identify three outliers and removed them. <p>
+											<ul style="text-indent: 2em;">
+												<li>&nbsp &nbsp (18.461351, -89.149521), which converts to a place in Pittsburg, CA  </li>
+												<li>&nbsp &nbsp (38.018949, -121.894084), which converts to a place in Maxico  </li>
+												<li>&nbsp &nbsp(43.682467, -79.475187), which converts to a place in Toronto </li>
+											</ul>
+
 											<p><span><i>Are star ratings coherent?</i></span></p>
+											<p>We check the minimum, maximum, and average of star ratings and verify that they are coherent as there are no unexpected negative values or ratings higher than 5
+												The <i>"star"</i> attribute is also verified to be a discrete variable, which is consistent with the Yelp rating system. 
+											</p>
 									</article>
 								</div>
 								<div class="col-md-8 col-md-offset-2">
 									<article>
 											<h2>Correctness</h2>
 											<p><span><i>Sample Bias</i></span></p>
+											<p>Given the dataset descripiton posted on Kaggle, the Yelp dataset is a subset of Yelp's businesses, reviews and user data. 
+												While we believe it is sampled randomly, possible sources of bias could include but not limit to gener, age, and other socio-economic factors. 
+												However, since Yelp doesn't collect/release these kinds of user information, we are unable to conduct bias analysis but would use caution when presenting findings and making conclusions. </p>
+
+											<p>For star ratings, we also suspect that there are qualitative differences in how people rate businessses. Given than people have different standards, 
+												someone's 4 stars might be the same as someone's 5 stars. We would extend more this topic in the later parts of the project by normalizing 
+												the star ratings and studying how this fluctuation might affect our prediction model. </p>
 											<p><span><i>Measurement Error</i></span></p>
+											<p>Since we check that all star ratings are coherent in the previous section, we would like to conclude that there is no measurement error associated with the Yelp dataset.</p>
 									</article>
 								</div>
 								<div class="col-md-8 col-md-offset-2">
