@@ -2,7 +2,7 @@ $font-primary: 'Poppins',Arial, sans-serif;
 $font-secondary: 'Nunito', Arial, sans-serif;
 
 // Overrides
-$grid-gutter-width: 40px !default; 
+$grid-gutter-width: 40px !default;
 $border-radius-base:  4px !default;
 $padding-base-vertical: 14px !default;
 
@@ -55,16 +55,16 @@ $form-group-margin-bottom: 30px !default;
           border-radius: $radius;
 }
 @mixin flex() {
-	display: -webkit-box;      
-  	display: -moz-box;         
-  	display: -ms-flexbox;      
-  	display: -webkit-flex;     
-  	display: flex;             
+	display: -webkit-box;
+  	display: -moz-box;
+  	display: -ms-flexbox;
+  	display: -webkit-flex;
+  	display: flex;
 }
 @mixin flexwrap() {
 	flex-wrap: wrap;
-	-webkit-flex-wrap: wrap; 
-	-moz-flex-wrap: wrap; 
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
 }
 
 @font-face {
@@ -90,7 +90,7 @@ $form-group-margin-bottom: 30px !default;
 	/* Better Font Rendering =========== */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	
+
 }
 
 @mixin gradient-background(){
@@ -104,7 +104,7 @@ background: linear-gradient(135deg, #499bea 0%, #798eea 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#499bea', endColorstr='#798eea', GradientType=1 );
 }
 
-// Import 
+// Import
 @import 'bootstrap/mixins';
 @import 'bootstrap/variables';
 
@@ -113,7 +113,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#499bea', end
 
 /* =======================================================
 *
-* 	Template Style 
+* 	Template Style
 *
 * ======================================================= */
 
@@ -134,7 +134,7 @@ body {
 	.offcanvas & {
 		overflow: hidden;
 		position: absolute;
-		
+
 		&:after {
 			@include transition(2s);
 			position: absolute;
@@ -189,7 +189,7 @@ h1, h2, h3, h4, h5, h6, figure {
 .work-img,
 .author-img,
 .mobile-img,
-.colorlib-video, 
+.colorlib-video,
 .blog-img,
 .colorlib-about-img,
 .services-img,
@@ -205,7 +205,7 @@ h1, h2, h3, h4, h5, h6, figure {
 	position: absolute;
 	top: 0;
 	left: 0;
-	right: 0;	
+	right: 0;
 	z-index: 9;
 	margin: 0 auto;
 	@media screen and (max-width: $screen-sm ) {
@@ -293,7 +293,7 @@ h1, h2, h3, h4, h5, h6, figure {
 						border-width: 8px;
 						margin-left: -8px;
 					}
-					
+
 					li {
 						display: block;
 						margin-bottom: 0px;
@@ -363,14 +363,14 @@ h1, h2, h3, h4, h5, h6, figure {
 		display: table;
 		text-align: center;
 		background: $brand-secondary;
-		
+
 		-webkit-box-shadow: 0px 14px 30px -15px rgba(0,0,0,0.75);
 		-moz-box-shadow: 0px 14px 30px -15px rgba(0,0,0,0.75);
 		-ms-box-shadow: 0px 14px 30px -15px rgba(0,0,0,0.75);
 		-o-box-shadow: 0px 14px 30px -15px rgba(0,0,0,0.75);
 		box-shadow: 0px 14px 30px -15px rgba(0,0,0,0.75);
 		@include border-radius(50%);
-		
+
 		i {
 			text-align: center;
 			display: table-cell;
@@ -391,7 +391,7 @@ h1, h2, h3, h4, h5, h6, figure {
 	}
 	&:hover {
 		.overlay {
-			background: rgba(0, 0, 0, .7);		
+			background: rgba(0, 0, 0, .7);
 		}
 		a {
 			-webkit-transform: scale(1.1);
@@ -399,7 +399,7 @@ h1, h2, h3, h4, h5, h6, figure {
 			-ms-transform: scale(1.1);
 			-o-transform: scale(1.1);
 			transform: scale(1.1);
-			
+
 		}
 	}
 }
@@ -448,7 +448,7 @@ h1, h2, h3, h4, h5, h6, figure {
 			span{
 				position: relative;
 			}
-			
+
 		}
 		h2{
 			color: $brand-white;
@@ -807,7 +807,7 @@ h1, h2, h3, h4, h5, h6, figure {
 				font-size: 12px;
 
 				span{
-					display: inline-block; 
+					display: inline-block;
 					a{
 						display: block;
 						color: $brand-white;
@@ -1251,7 +1251,7 @@ article{
 	font-weight: 300;
 	background: lighten($brand-black,100%);
 	@include border-radius(0px);
-	
+
 	&:focus, &:active {
 		background: $brand-white;
 		box-shadow: none;
@@ -1505,7 +1505,7 @@ input[type="text"] {
 			text-decoration: none;
 			outline: none;
 		}
-	}	
+	}
 }
 
 
