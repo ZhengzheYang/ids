@@ -22,7 +22,7 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400" rel="stylesheet">
-	
+
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="css/animate.css">
 	<!-- Icomoon Icon Fonts-->
@@ -48,7 +48,7 @@
 	<![endif]-->
 	</head>
 	<body>
-		
+
 	<div class="colorlib-loader"></div>
 
 	<div id="page">
@@ -78,7 +78,7 @@
 						<div class="col-md-12 col-md-offset-0">
 							<div class="animate-box">
 								<h2>Data Quality</h2>
-								<p class="breadcrumbs"><span><a href="index.html" style="font-weight: bold">Home</a></span> 
+								<p class="breadcrumbs"><span><a href="index.html" style="font-weight: bold">Home</a></span>
 								<span style="font-weight: bold">Data</span></p>
 							</div>
 						</div>
@@ -98,7 +98,6 @@
 							<p>Since we limit the geographical scope to only concerning Pittsburgh city, we first select out all the entries whose city attribute is Pittsburgh
 							   from the business table, and join it together with the review table on the attribute <i>"business_id"</i>
 							</p>
-							<a href="./pittsburgh_review.csv">Click here to download the full dataset in csv</a></i>
 						</div>
 					</div>
 				</div>
@@ -123,13 +122,13 @@
 									<article>
 											<h2>Completeness</h2>
 											<p><span><i>Approprioate Data</i></span></p>
-											<p>The raw dataset is obtained from Kaggle, and we believe it is the largest and most comprehensive one that Yelp has made public to people for research purposes. 
+											<p>The raw dataset is obtained from Kaggle, and we believe it is the largest and most comprehensive one that Yelp has made public to people for research purposes.
 												Even after reducing the scope to only considering the businesses located in the Pittsburgh city, we are able to gather a table with over 170,000 entries and 20 attributes. </p>
 											<p><span><i>Missing Data</i></span></p>
-											<p>we notice that only <i>"neighborhood"</i> and <i>"postal_code"</i> contain missing entries. Further analysis shows that there are 2194 unique businesses in total that doesn't have a neighborhood attribute, 
-												and 18 unique businesses in total with no postal_code attribute. 
-												Since we focus on providing explanatory analysis for this part of the project, 
-												we choose not to remove the entire row now if its neigherbood and/or postal_code attributes are missing. 
+											<p>we notice that only <i>"neighborhood"</i> and <i>"postal_code"</i> contain missing entries. Further analysis shows that there are 2194 unique businesses in total that doesn't have a neighborhood attribute,
+												and 18 unique businesses in total with no postal_code attribute.
+												Since we focus on providing explanatory analysis for this part of the project,
+												we choose not to remove the entire row now if its neigherbood and/or postal_code attributes are missing.
 												The missing data will be dealt with later when we analyze more specific analysis that make uses of those two attributes.</p>
 									</article>
 								</div>
@@ -148,7 +147,7 @@
 											<br>
 											<p><span><i>Are star ratings coherent?</i></span></p>
 											<p>We check the minimum, maximum, and average of star ratings and verify that they are coherent as there are no unexpected negative values or ratings higher than 5
-												The <i>"star"</i> attribute is also verified to be a discrete variable, which is consistent with the Yelp rating system. 
+												The <i>"star"</i> attribute is also verified to be a discrete variable, which is consistent with the Yelp rating system.
 											</p>
 											<p><span><i>Are business names coherent?</i></span></p>
 											<p>We notice that business names might need string normalization since names such as "Primanti Bros" and "Primanti Bros." both exist in the dataset.
@@ -162,12 +161,12 @@
 									<article>
 											<h2>Correctness</h2>
 											<p><span><i>Sample Bias</i></span></p>
-											<p>Given the dataset descripiton posted on Kaggle, the Yelp dataset is a subset of Yelp's businesses, reviews and user data. 
-												While we believe it is sampled randomly, possible sources of bias could include but not limit to gener, age, and other socio-economic factors. 
+											<p>Given the dataset descripiton posted on Kaggle, the Yelp dataset is a subset of Yelp's businesses, reviews and user data.
+												While we believe it is sampled randomly, possible sources of bias could include but not limit to gener, age, and other socio-economic factors.
 												However, since Yelp doesn't collect/release these kinds of user information, we are unable to conduct bias analysis but would use caution when presenting findings and making conclusions. </p>
 
-											<p>For star ratings, we also suspect that there are qualitative differences in how people rate businessses. Given than people have different standards, 
-												someone's 4 stars might be the same as someone's 5 stars. We would extend more this topic in the later parts of the project by normalizing 
+											<p>For star ratings, we also suspect that there are qualitative differences in how people rate businessses. Given than people have different standards,
+												someone's 4 stars might be the same as someone's 5 stars. We would extend more this topic in the later parts of the project by normalizing
 												the star ratings and studying how this fluctuation might affect our prediction model. </p>
 											<p><span><i>Measurement Error</i></span></p>
 											<p>Since we check that all star ratings are coherent in the previous section, we would like to conclude that there is no measurement error associated with the Yelp dataset.</p>
@@ -176,7 +175,7 @@
 								<div class="col-md-8 col-md-offset-2">
 									<article>
 											<h2>Accountability</h2>
-											<p>The dataset was published by Yelp on Kaggle for people to freely use and conduct research. 
+											<p>The dataset was published by Yelp on Kaggle for people to freely use and conduct research.
 												And we are using version control to keep track of both the original data and our verison afer filtering and cleaning. </p>
 									</article>
 								</div>
@@ -185,7 +184,7 @@
 				</div>
 			</div>
 
-		
+
 
 		<footer id="colorlib-footer">
 			<div class="copy">
@@ -195,7 +194,7 @@
 							<p>
 								 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --><br> 
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --><br>
 								Demo Images: <a href="http://unsplash.co/" target="_blank">Unsplash</a>, <a href="http://pexels.com/" target="_blank">Pexels</a>
 								<br> Photo by Igor Oliyarnik on Unsplash <br>
 								Photo by Markus Spiske on Unsplash <br>
@@ -213,7 +212,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up2"></i></a>
 	</div>
-	
+
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
@@ -238,4 +237,3 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
 	</body>
 </html>
-
