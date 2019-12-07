@@ -81,7 +81,7 @@
 								<h2>Prediction Model</h2>
 								<p class="breadcrumbs">
 									<span><a href="index.html" style="color: #363636; font-weight: bold">Home</a>
-									</span> 
+									</span>
 									<span style="color: #363636;">Services</span></p>
 							</div>
 						</div>
@@ -105,7 +105,7 @@
 										<li>Passive-Aggressive</li>
 									</ul>
 									<p>
-										At first, only a number of unigram features are used. Given its promising results, a simple unigram vectorized feature map is created to perform the prediction. The feature importance analysis is reported.
+										First, the results given by the vectorized model is reported. Detailed training time and improvement by batches are also presented. Lastly, the feature importances are extracted and plotted using simple Logistic Regressions on a few of unigram features.
 									</p>
 							</article>
 						</div>
@@ -118,14 +118,32 @@
             <div class="featured-wrap">
                 <div class="col-md-8 col-md-offset-2">
                     <article>
+											<h2>Results</h2>
+                        <iframe id="accuracy" scrolling="no" style="border:none;" src = "graphs/accuracy.html" height="300" width="100%">
+                        </iframe>
+                        <ul>
+                            <p> <i class="icon-lightbulb"> &nbsp</i>
+                                    The results are evaluated using simple accuracy metric. As we can see, the Stochastic Gradient Descent and Passive-Aggressive models perform the best, with an accuracy above 58%+.
+														</p>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+
+		<div class="colorlib-featured">
+        <div class="row animate-box">
+            <div class="featured-wrap">
+                <div class="col-md-8 col-md-offset-2">
+                    <article>
                         <iframe id="acc_training_sample" scrolling="no" style="border:none;" src = "graphs/Classification Accuracy with Training Examples.html" height="560" width="100%">
                         </iframe>
                         <ul>
                             <p> <i class="icon-lightbulb"> &nbsp</i>
-                                    The accuracy is plotted against each batch of training sample
+                                This plot shows each model's accuracy with the number of training examples. We can see that all models fit approximately at the same pace, and the reason might be the size of our data is relatively small. Also, Perceptron and Passive Aggressive model achieve the best performance.
 														</p>
                         </ul>
-
                     </article>
                 </div>
             </div>
@@ -141,7 +159,7 @@
                         </iframe>
                         <ul>
                             <p> <i class="icon-lightbulb"> &nbsp</i>
-                                    The accuracy is plotted against each time point.
+                                    This plot shows each model's accuracy through trianing time, we can also draw the conclusion that all models converge at approximately the same pace.
 														</p>
                         </ul>
 
@@ -160,8 +178,25 @@
                         </iframe>
                         <ul>
                             <p> <i class="icon-lightbulb"> &nbsp</i>
-                                    The training time for each model.
+This is plot shows the overall fitting time of each model, and with this plot we can see that the Perceptron actually converge fastest while Naive Bayesian Multinomial takes the most time to converge.
 														</p>
+                        </ul>
+
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+
+		<div class="colorlib-featured">
+        <div class="row animate-box">
+            <div class="featured-wrap">
+                <div class="col-md-8 col-md-offset-2">
+                    <article>
+                        <iframe id="logistic" scrolling="no" style="border:none;" src = "graphs/Logistic Regression Feature Importance.html" height="560" width="100%">
+                        </iframe>
+                        <ul>
+                            <p> <i class="icon-lightbulb"> &nbsp</i>We use logistic regression to predict review stars with features: 'review_count', 'is_open', 'avg_star', 'useful', 'funny', and 'cool'. The prediction accuracy on test data of logistic regression is 45.03%. We visualize the feature importance with heatmap for each feature and we can see that 'funny', 'useful' and 'avg_star' are actually of vital importance to the prediction result. For example, if the avg_star of a business is low the review rating should be low correspondingly. Also, if many people think a review to be funny then this review tend to be of predicted as of high rating, on the other hand, if most people think a review to be useful then this review is more likely to be negative.														</p>
                         </ul>
 
                     </article>
