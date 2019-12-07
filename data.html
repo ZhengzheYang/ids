@@ -78,7 +78,8 @@
 						<div class="col-md-12 col-md-offset-0">
 							<div class="animate-box">
 								<h2>Data Quality</h2>
-								<p class="breadcrumbs"><span><a href="index.html">Home</a></span> <span>Data</span></p>
+								<p class="breadcrumbs"><span><a href="index.html" style="font-weight: bold">Home</a></span> 
+								<span style="font-weight: bold">Data</span></p>
 							</div>
 						</div>
 					</div>
@@ -148,6 +149,12 @@
 											<p><span><i>Are star ratings coherent?</i></span></p>
 											<p>We check the minimum, maximum, and average of star ratings and verify that they are coherent as there are no unexpected negative values or ratings higher than 5
 												The <i>"star"</i> attribute is also verified to be a discrete variable, which is consistent with the Yelp rating system. 
+											</p>
+											<p><span><i>Are business names coherent?</i></span></p>
+											<p>We notice that business names might need string normalization since names such as "Primanti Bros" and "Primanti Bros." both exist in the dataset.
+											   However, after further exploration, we found that these two names actually have different unique identifiers. And there are lots of other instances
+											   where two entries share the same business name but different business_ids. We conclude that this might due to businesses having multiple branches, and each of which has its own
+											   unique identifier. Thus, entries such as "Primanti Bros" and "Primanti Bros." should be counted as different instances and we choose not to perform normalization on them.
 											</p>
 									</article>
 								</div>
