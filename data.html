@@ -126,11 +126,11 @@
 											<p>The raw dataset is obtained from Kaggle, and we believe it is the largest and most comprehensive one that Yelp has made public to people for research purposes. 
 												Even after reducing the scope to only considering the businesses located in the Pittsburgh city, we are able to gather a table with over 170,000 entries and 20 attributes. </p>
 											<p><span><i>Missing Data</i></span></p>
-											<p>we notice that only <i>"neighborhood"</i> and <i>"postal_code"</i> contain missing entries. Further analysis shows that there are 2194 unique businesses in total that doesn't have a neighborhood attribute, 
+											<p>We notice that only <i>"neighborhood"</i> and <i>"postal_code"</i> contain missing entries. Further analysis shows that there are 2194 unique businesses in total that doesn't have a neighborhood attribute, 
 												and 18 unique businesses in total with no postal_code attribute. 
 												Since we focus on providing explanatory analysis for this part of the project, 
 												we choose not to remove the entire row now if its neigherbood and/or postal_code attributes are missing. 
-												The missing data will be dealt with later when we analyze more specific analysis that make uses of those two attributes.</p>
+												The missing data will be dealt with later when we make more specific analysis that make uses of those two attributes.</p>
 									</article>
 								</div>
 								<div class="col-md-8 col-md-offset-2">
@@ -148,7 +148,7 @@
 											<br>
 											<p><span><i>Are star ratings coherent?</i></span></p>
 											<p>We check the minimum, maximum, and average of star ratings and verify that they are coherent as there are no unexpected negative values or ratings higher than 5
-												The <i>"star"</i> attribute is also verified to be a discrete variable, which is consistent with the Yelp rating system. 
+											. The <i>"star"</i> attribute is also verified to be a discrete variable, which is consistent with the Yelp rating system. 
 											</p>
 											<p><span><i>Are business names coherent?</i></span></p>
 											<p>We notice that business names might need string normalization since names such as "Primanti Bros" and "Primanti Bros." both exist in the dataset.
